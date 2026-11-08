@@ -69,3 +69,10 @@ styling, images and music. To make it fully independent, download the CSS, image
 - Version 1 (online): venue replaced with Instagram live story links, Google Maps
   button removed, cover greeting set to "Sahabat-sahabat kami", RSVP & ucapan form
   removed, "no gifts" note replaced with a Wedding Gift QR section.
+- Fonts: all text uses EB Garamond (fallback Book Antiqua / Palatino), with a thin
+  black outline (1px, 2px on titles and names).
+- Faster loading: removed unused WooCommerce, menu, icon-font and 8 Google Font
+  families (64 → 28 stylesheets, 17 → 10 scripts); couple photos lazy-load.
+- Music: not downloaded until played, stops at 2:00 with a short fade-out, and
+  pauses when the tab is switched, the phone is locked or the browser is closed.
+  Change `MAX_SECONDS` in `index.html` to adjust the limit.
