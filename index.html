@@ -241,6 +241,23 @@ html body h1, html body h2, html body h3,
                1.5px 1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px -1.5px 0 #000 !important;
 }
 </style>
+<style id="ucapan-css">
+.ucapan-wrap{position:relative;z-index:2;max-width:380px;margin:30px auto 10px;padding:26px 18px;border:1px solid rgba(192,162,117,.6);border-radius:16px;background:rgba(0,0,0,.18);text-align:center;box-sizing:border-box}
+.ucapan-title{font-size:34px;font-weight:600;line-height:1.1;color:#C0A275;margin:0 0 6px}
+.ucapan-sub{font-size:16px;color:#fff;margin:0 0 18px}
+#ucapan-form input,#ucapan-form textarea{display:block;width:100%;box-sizing:border-box;margin:0 0 10px;padding:10px 12px;border:1px solid #C0A275;border-radius:8px;background:#fff;color:#222 !important;font-size:16px;text-shadow:none !important;resize:vertical}
+#ucapan-form input::placeholder,#ucapan-form textarea::placeholder{color:#888;text-shadow:none !important}
+#ucapan-kirim{display:inline-block;padding:9px 34px;border:0;border-radius:20px;background:#C0A275;color:#fff;font-size:17px;font-weight:600;cursor:pointer}
+#ucapan-kirim:disabled{opacity:.6;cursor:default}
+.ucapan-status{min-height:1.2em;margin:0 0 10px;font-size:15px;color:#fff}
+.ucapan-status.err{color:#ffb4a8}
+.ucapan-count{margin:22px 0 8px;font-size:15px;color:#C0A275}
+.ucapan-list{list-style:none;margin:0;padding:0;max-height:420px;overflow-y:auto;text-align:left}
+.ucapan-list li{margin:0 0 10px;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.08);border-left:3px solid #C0A275}
+.ucapan-list .u-nama{font-weight:700;color:#C0A275;font-size:16px}
+.ucapan-list .u-tgl{font-size:12px;color:#ddd;margin-left:6px}
+.ucapan-list .u-teks{margin:4px 0 0;color:#fff;font-size:15px;line-height:1.5;white-space:pre-line;word-wrap:break-word}
+</style>
 </head>
 <body class="wp-singular post-template post-template-elementor_canvas single single-post postid-14657 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-astra theme-astra ehf-template-astra ehf-stylesheet-astra ast-desktop ast-narrow-container ast-separate-container ast-no-sidebar astra-4.14.0 ast-blog-single-style-1 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header ast-normal-title-enabled elementor-default elementor-template-canvas elementor-kit-1603 elementor-page elementor-page-14657 ast-header-loaded" data-elementor-device-mode="desktop">
 				<script data-cfasync="false">
@@ -652,7 +669,19 @@ html body h1, html body h2, html body h3,
 					<p class="elementor-heading-title elementor-size-default">Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. (QS. ARRUM : 21)</p>				</div>
 				</div>
 				
-				<div class="elementor-element elementor-element-e2ac574 elementor-align-right elementor-absolute lws-sticky-section-no elementor-invisible elementor-widget elementor-widget-lottie" data-id="e2ac574" data-element_type="widget" data-e-type="widget" data-settings="{&quot;source_json&quot;:{&quot;url&quot;:&quot;https:\/\/soloinveet.com\/wp-content\/uploads\/2026\/02\/bunga-1-3.json&quot;,&quot;id&quot;:&quot;2778&quot;,&quot;size&quot;:&quot;&quot;},&quot;loop&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation_delay&quot;:50,&quot;source&quot;:&quot;media_file&quot;,&quot;caption_source&quot;:&quot;none&quot;,&quot;link_to&quot;:&quot;none&quot;,&quot;trigger&quot;:&quot;arriving_to_viewport&quot;,&quot;viewport&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;play_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;start_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;end_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:100,&quot;sizes&quot;:[]},&quot;renderer&quot;:&quot;svg&quot;}" data-widget_type="lottie.default">
+				<div id="ucapan" class="ucapan-wrap">
+	<h2 class="ucapan-title">Ucapan &amp; Doa</h2>
+	<p class="ucapan-sub">Kirimkan ucapan dan doa terbaik untuk kami</p>
+	<form id="ucapan-form" novalidate>
+		<input id="ucapan-nama" type="text" name="author" maxlength="60" placeholder="Nama" autocomplete="name" required>
+		<textarea id="ucapan-teks" name="comment" rows="3" maxlength="1000" placeholder="Ucapan" required></textarea>
+		<p id="ucapan-status" class="ucapan-status" aria-live="polite"></p>
+		<button id="ucapan-kirim" type="submit">Kirim</button>
+	</form>
+	<p id="ucapan-count" class="ucapan-count" style="display:none"></p>
+	<ul id="ucapan-list" class="ucapan-list"></ul>
+</div>
+<div class="elementor-element elementor-element-e2ac574 elementor-align-right elementor-absolute lws-sticky-section-no elementor-invisible elementor-widget elementor-widget-lottie" data-id="e2ac574" data-element_type="widget" data-e-type="widget" data-settings="{&quot;source_json&quot;:{&quot;url&quot;:&quot;https:\/\/soloinveet.com\/wp-content\/uploads\/2026\/02\/bunga-1-3.json&quot;,&quot;id&quot;:&quot;2778&quot;,&quot;size&quot;:&quot;&quot;},&quot;loop&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation_delay&quot;:50,&quot;source&quot;:&quot;media_file&quot;,&quot;caption_source&quot;:&quot;none&quot;,&quot;link_to&quot;:&quot;none&quot;,&quot;trigger&quot;:&quot;arriving_to_viewport&quot;,&quot;viewport&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;play_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;start_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;end_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:100,&quot;sizes&quot;:[]},&quot;renderer&quot;:&quot;svg&quot;}" data-widget_type="lottie.default">
 				<div class="elementor-widget-container">
 					<div class="e-lottie__container"><div class="e-lottie__animation"></div></div>				</div>
 				</div>
@@ -1091,4 +1120,92 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 //# sourceURL=elementor-frontend-js-before
 </script>
 <script id="elementor-frontend-js" src="https://soloinveet.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.5"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
-<script id="lottie-js" src="https://soloinveet.com/wp-content/plugins/elementor-pro/assets/lib/lottie/lottie.min.js?ver=5.6.6"></script></body></html>
+<script id="lottie-js" src="https://soloinveet.com/wp-content/plugins/elementor-pro/assets/lib/lottie/lottie.min.js?ver=5.6.6"></script><script>
+/* Ucapan: dikirim ke website Soloinveet (komentar WordPress post 14657), tanpa RSVP */
+(function () {
+    var SITE = 'https://soloinveet.com';
+    var POST_ID = 14657;
+    var form = document.getElementById('ucapan-form');
+    if (!form) return;
+    var nama = document.getElementById('ucapan-nama');
+    var teks = document.getElementById('ucapan-teks');
+    var btn = document.getElementById('ucapan-kirim');
+    var status = document.getElementById('ucapan-status');
+    var list = document.getElementById('ucapan-list');
+    var count = document.getElementById('ucapan-count');
+    var pending = [];   // ucapan yang baru dikirim dari HP ini
+    var server = [];
+
+    // Isi nama otomatis dari link ?to=
+    var q = new URLSearchParams(location.search);
+    var tamu = q.get('to') || q.get('dear') || q.get('kepada');
+    if (tamu) nama.value = tamu;
+
+    function say(msg, isErr) { status.textContent = msg; status.className = 'ucapan-status' + (isErr ? ' err' : ''); }
+    function plain(html) { var d = new DOMParser().parseFromString(html || '', 'text/html'); return (d.body.textContent || '').trim(); }
+    function norm(t) { return String(t).replace(/\s+/g, ' ').trim().toLowerCase(); }
+    function tgl(d) {
+        try { return new Date(d).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }); }
+        catch (e) { return ''; }
+    }
+
+    function render() {
+        // buang ucapan lokal yang sudah muncul di server
+        pending = pending.filter(function (p) {
+            return !server.some(function (c) { return norm(c.nama) === norm(p.nama) && norm(c.teks) === norm(p.teks); });
+        });
+        var all = pending.concat(server);
+        list.textContent = '';
+        all.forEach(function (c) {
+            var li = document.createElement('li');
+            var n = document.createElement('span'); n.className = 'u-nama'; n.textContent = c.nama;
+            var t = document.createElement('span'); t.className = 'u-tgl'; t.textContent = c.tgl;
+            var p = document.createElement('p'); p.className = 'u-teks'; p.textContent = c.teks;
+            li.appendChild(n); li.appendChild(t); li.appendChild(p);
+            list.appendChild(li);
+        });
+        count.textContent = all.length + ' Ucapan';
+        count.style.display = all.length ? '' : 'none';
+    }
+
+    function load() {
+        var url = SITE + '/wp-json/wp/v2/comments?post=' + POST_ID +
+                  '&per_page=100&order=desc&_fields=id,author_name,date,content';
+        return fetch(url, { credentials: 'omit' })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(function (rows) {
+                server = rows.map(function (c) { return { nama: c.author_name, teks: plain(c.content && c.content.rendered), tgl: tgl(c.date) }; });
+                render();
+            })
+            .catch(function () { render(); });   // daftar tidak bisa dimuat: form tetap jalan
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var n = nama.value.trim(), t = teks.value.trim();
+        if (!n) { say('Mohon isi nama Anda.', true); nama.focus(); return; }
+        if (t.length < 2) { say('Mohon tulis ucapan Anda (minimal 2 huruf).', true); teks.focus(); return; }
+
+        btn.disabled = true; say('Mengirim…');
+        var body = new URLSearchParams({
+            author: n, comment: t,
+            comment_post_ID: String(POST_ID), comment_parent: '0',
+            // kolom bawaan form Soloinveet (anti-spam), jangan diubah
+            name: 'username', nombre: '', 'form-cui': '', commentpress: 'true', submit: 'Kirim'
+        });
+        fetch(SITE + '/wp-comments-post.php', { method: 'POST', mode: 'no-cors', body: body, credentials: 'omit' })
+            .then(function () {
+                pending.unshift({ nama: n, teks: t, tgl: tgl(new Date()) });
+                teks.value = '';
+                say('Terima kasih! Ucapan Anda sudah terkirim.');
+                render();
+                setTimeout(load, 2500);
+            })
+            .catch(function () { say('Gagal mengirim. Periksa koneksi internet lalu coba lagi.', true); })
+            .then(function () { btn.disabled = false; });
+    });
+
+    load();
+})();
+</script>
+</body></html>
